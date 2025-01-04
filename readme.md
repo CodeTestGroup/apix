@@ -2,6 +2,9 @@
 
 **Apix** is a lightweight API solution for integrating user authentication and management into your website or web application. With easy-to-use endpoints for login, signup, and user listing, along with pre-built examples and a demo playground, Apix helps you quickly implement essential API functionality.
 
+Visit the homepage:  
+[Apix Homepage](http://apix.rf.gd)
+
 ---
 
 ## Features
@@ -10,7 +13,7 @@
 - **User Management**: Retrieve a list of users with a single API call.
 - **Prebuilt Examples**: Easily copy and paste the example code into your website.
 - **Demo Playground**: Interactive page to test API requests and see live results.
-- **Bootstrap Integration**: Professionally styled templates using Bootstrap for easy integration
+- **Bootstrap Integration**: Professionally styled templates using Bootstrap for easy integration.
 
 ## API Endpoints
 
@@ -68,7 +71,7 @@
 Check out the interactive demo where you can test the login, signup, and list users functionality. It's a great way to see how the API works before integrating it into your project.
 
 Visit the demo page:  
-[Demo Playground](http://apix.rf.gd/demo.php))
+[Demo Playground](http://apix.rf.gd/demo.php)
 
 ---
 
