@@ -1,133 +1,96 @@
-# apix API
+# Apix
 
-The `apix` API provides endpoints for managing user authentication, signup, and usage tracking for a given API token. It includes actions for login, signup, user listing, and token usage stats.
+**Apix** is a lightweight API solution for integrating user authentication and management into your website or web application. With easy-to-use endpoints for login, signup, and user listing, along with pre-built examples and a demo playground, Apix helps you quickly implement essential API functionality.
+
+---
+
+## Features
+
+- **User Authentication**: Simple and secure signup and login endpoints.
+- **User Management**: Retrieve a list of users with a single API call.
+- **Prebuilt Examples**: Easily copy and paste the example code into your website.
+- **Demo Playground**: Interactive page to test API requests and see live results.
+- **Bootstrap Integration**: Professionally styled templates using Bootstrap for easy integration
 
 ## API Endpoints
 
-- [Login](#login)
-- [Signup](#signup)
-- [List Users](#list-users)
-- [View Usage](#view-usage)
+### 1. **Signup**  
+**URL**: `http://apix.rf.gd/api.php?mode=signup&username=[username]&password=[password]`
 
-## Request Types
+- **Parameters**:
+  - `username` (string) - Desired username.
+  - `password` (string) - Desired password (will be hashed).
 
-### 1. Login
+- **Response**:
+  - On success:  
+    ```json
+    { "status": "success", "message": "User created successfully" }
+    ```
+  - On failure:  
+    ```json
+    { "status": "error", "message": "Username already exists" }
+    ```
 
-#### HTTP Request:
+### 2. **Login**  
+**URL**: `http://apix.rf.gd/api.php?mode=login&username=[username]&password=[password]`
 
-```http
-POST /api_demo.php?api_token=YOUR_API_TOKEN&action=login HTTP/1.1
-Host: yourdomain.com
-Content-Type: application/json
-Content-Length: 38
+- **Parameters**:
+  - `username` (string) - The username to log in.
+  - `password` (string) - The password entered during login.
 
-{
-  "username": "testuser",
-  "password": "testpass"
-}
-```
-#### Response Example:
-```http
-{
-    "status": "success",
-    "message": "Login successful.",
-    "username": "testuser"
-}
+- **Response**:
+  - On success:  
+    ```json
+    { "status": "success", "message": "Login successful", "username": "demoUser" }
+    ```
+  - On failure:  
+    ```json
+    { "status": "error", "message": "Invalid username or password" }
+    ```
 
-```
+### 3. **List Users**  
+**URL**: `http://apix.rf.gd/api.php?mode=get_users`
 
-### 2. Signup
+- **Response**:
+  - On success:  
+    ```json
+    { "status": "success", "users": [{"username": "user1"}, {"username": "user2"}] }
+    ```
+  - On failure:  
+    ```json
+    { "status": "error", "message": "Error fetching users" }
+    ```
 
-#### HTTP Request:
+---
 
-```http
-POST /api_demo.php?api_token=YOUR_API_TOKEN&action=signup HTTP/1.1
-Host: yourdomain.com
-Content-Type: application/json
-Content-Length: 38
+## Demo Playground
 
-{
-  "username": "newuser",
-  "password": "newpass"
-}
+Check out the interactive demo where you can test the login, signup, and list users functionality. It's a great way to see how the API works before integrating it into your project.
 
-```
-#### Response Example:
-```http
-{
-    "status": "success",
-    "message": "Signup successful."
-}
+Visit the demo page:  
+[Demo Playground](http://apix.rf.gd/demo.php))
 
+---
 
-```
-### 3. List Users
+## Prebuilt Examples
 
-#### HTTP Request:
+Apix comes with prebuilt frontend examples for quick integration into your website. You can preview and copy the code to use in your projects.
 
-```http
-GET /api_demo.php?api_token=YOUR_API_TOKEN&action=list_users HTTP/1.1
-Host: yourdomain.com
+### Available Examples
 
-```
-#### Response Example:
-```http
-{
-    "status": "success",
-    "users": [
-        {"username": "user1"},
-        {"username": "user2"}
-    ]
-}
+- **Example 1**: Bootstrap login form
+  
+Visit the examples page:  
+[Examples](http://apix.rf.gd/examples.php)
 
+---
 
-```
-### 4. Veiw Usage
+## Contributing
 
-#### HTTP Request:
+We welcome contributions! Feel free to fork this repository, create a branch, and submit a pull request. Please ensure that your code follows the coding style and includes tests where applicable.
 
-```http
-GET /api_demo.php?api_token=YOUR_API_TOKEN&action=view_usage HTTP/1.1
-Host: yourdomain.com
-```
-#### Response Example:
-```http
-{
-    "status": "success",
-    "used_count": 5
-}
+---
 
-```
-## Common Errors
-### Missing API Token
-```http
-{
-    "status": "error",
-    "message": "API token is required."
-}
+## License
 
-```
-### Invalid API Token
-```http
-{
-    "status": "error",
-    "message": "Invalid API token."
-}
-
-```
-### Missing Required Parameters
-```http
-{
-    "status": "error",
-    "message": "Username and password are required."
-}
-
-```
-### Username Already Exists
-```http
-{
-    "status": "error",
-    "message": "Username already exists."
-}
-
-```
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
