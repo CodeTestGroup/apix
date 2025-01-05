@@ -56,16 +56,8 @@
         </form>
     </div>
 
-    <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault();
+    <script src="https://codetestgroup.github.io/apix/examples/assets/login.js">
 
-            const username = encodeURIComponent(document.getElementById('username').value);
-            const password = encodeURIComponent(document.getElementById('password').value);
-
-            const redirectUrl = `http://localhost/apix/api.php?mode=login&username=${username}&password=${password}&nextpage=examples/full-example/home.html`;
-            window.location.href = redirectUrl;
-        });
     </script>
 </body>
 </html>
