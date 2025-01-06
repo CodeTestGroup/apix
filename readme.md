@@ -61,6 +61,18 @@ Visit the homepage:
     ```json
     { "status": "error", "message": "Error fetching users" }
     ```
+### 4. **Get Username From UUID**  
+**URL**: `http://apix.rf.gd/api.php?mode=uuid&uuid=[uuid]`
+
+- **Response**:
+  - On success:  
+    ```json
+    {"status":"success","username":"demoUser"}
+    ```
+  - On failure:  
+    ```json
+    {"status":"error","message":"UUID not found"}
+    ```
 
 ---
 
