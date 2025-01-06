@@ -1,4 +1,4 @@
-# APIx Login Example
+# APIx Signup Example
 
 This is an example file for the APIx login API 
 
