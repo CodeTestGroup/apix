@@ -1,3 +1,12 @@
+// Get the URLSearchParams object from the current URL
+const urlParams = new URLSearchParams(window.location.search);
+
+// Extract the value of the 'url' parameter
+const $url = urlParams.get('url');
+
+// Log or use the variable
+console.log($url);
+
 document.getElementById('loginForm').addEventListener('submit', function(event) {
             event.preventDefault();
 
@@ -8,11 +17,3 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
             window.location.href = redirectUrl;
         });
         
-// Get the URLSearchParams object from the current URL
-const urlParams = new URLSearchParams(window.location.search);
-
-// Extract the value of the 'url' parameter
-const $url = urlParams.get('url');
-
-// Log or use the variable
-console.log($url);
