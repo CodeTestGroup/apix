@@ -9,11 +9,9 @@ Visit the homepage:
 
 ## Features
 
-- **User Authentication**: Simple and secure signup and login endpoints.
 - **User Management**: Retrieve a list of users with a single API call.
 - **Prebuilt Examples**: Easily copy and paste the example code into your website.
 - **Demo Playground**: Interactive page to test API requests and see live results.
-- **Bootstrap Integration**: Professionally styled templates using Bootstrap for easy integration.
 
 ## API Endpoints
 
