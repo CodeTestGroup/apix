@@ -4,6 +4,6 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
             const username = encodeURIComponent(document.getElementById('username').value);
             const password = encodeURIComponent(document.getElementById('password').value);
 
-            const redirectUrl = `http://localhost/apix/api.php?mode=signup&username=${username}&password=${password}&nextpage=examples/full-example/login.html`;
+            const redirectUrl = `http://192.168.1.25/apix/api.php?mode=signup&username=${username}&password=${password}&nextpage=examples/full-example/login.html`;
             window.location.href = redirectUrl;
         });
