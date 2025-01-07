@@ -10,7 +10,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
             const password = encodeURIComponent(document.getElementById('password').value);
             const $url = urlParams.get('url');
 
-            const redirectUrl = `http://localhost/apix/api.php?mode=login&username=${username}&password=${password}&nextpage=${url}`;
+            const redirectUrl = `http://192.168.1.25/apix/api.php?mode=login&username=${username}&password=${password}&nextpage=${url}`;
             window.location.href = redirectUrl;
         });
         
