@@ -1,7 +1,6 @@
 // Get the URLSearchParams object from the current URL
 const urlParams = new URLSearchParams(window.location.search);
 // Log or use the variable
-console.log($url);
 
 document.getElementById('loginForm').addEventListener('submit', function(event) {
             event.preventDefault();
